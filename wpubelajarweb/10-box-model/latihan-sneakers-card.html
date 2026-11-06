@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adidas Card Modern</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #eef2f5;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .product-card {
+      background-color: #ffffff;
+      width: 360px;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e1e8ed;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 230px;
+      overflow: hidden;
+      border-radius: 14px;
+      margin-bottom: 18px;
+      background-color: #111;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.05);
+    }
+
+    .product-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+
+    .product-category {
+      font-size: 11px;
+      color: #0066cc;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .product-description {
+      font-size: 13.5px;
+      color: #555555;
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+
+    /* Tata Letak Baru: Harga diletakkan di sebelah kanan label ukuran */
+    .price-section {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding-top: 14px;
+      border-top: 1px dashed #ddd;
+    }
+
+    .price-section .price {
+      font-size: 22px;
+      color: #000000;
+      font-weight: 800;
+    }
+
+    .price-section .original-price {
+      font-size: 13px;
+      color: #888888;
+      text-decoration: line-through;
+      margin-left: 6px;
+    }
+
+    /* Styling Fieldset & Radio Options */
+    .size-options-wrapper {
+      border: none;
+      margin-bottom: 20px;
+    }
+
+    .size-label-text {
+      font-size: 12px;
+      color: #666666;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .size-options {
+      display: flex;
+      gap: 8px;
+      justify-content: space-between;
+    }
+
+    .size-options input[type="radio"] {
+      display: none;
+    }
+
+    .size-options label {
+      flex: 1;
+      height: 42px;
+      border: 1.5px solid #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: #333333;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: all 0.25s ease;
+      background-color: #fafafa;
+    }
+
+    .size-options label:hover {
+      border-color: #000;
+      background-color: #f0f0f0;
+    }
+
+    .size-options input[type="radio"]:checked + label {
+      background-color: #000000;
+      border-color: #000000;
+      color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* Tombol Beli */
+    .buy-button {
+      width: 100%;
+      padding: 15px;
+      background-color: #000000;
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .buy-button:hover {
+      background-color: #0066cc;
+      box-shadow: 0 6px 18px rgba(0, 102, 204, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <article class="product-card">
+    <figure class="product-image">
+      <img src="https://images.unsplash.com/photo-1518002171953-a080ee817e1f?q=80&w=600&auto=format&fit=crop" alt="Adidas EQT Support">
+    </figure>
+
+    <p class="product-category">Adidas Originals</p>
+    <h3 class="product-title">EQT Support ADV</h3>
+
+    <p class="product-description">
+      Sepatu adidas EQT Support menggabungkan siluet retro 90-an dengan kenyamanan modern. Dirancang khusus dengan bahan breathable mesh yang ringan untuk aktivitas harian.
+    </p>
+
+    <div class="price-section">
+      <div>
+        <span class="price">IDR 2,199,000</span>
+        <del class="original-price">IDR 2,799,000</del>
+      </div>
+    </div>
+
+    <form action="">
+      <fieldset class="size-options-wrapper">
+        <legend class="size-label-text">Pilih Ukuran (UK):</legend>
+        <div class="size-options">
+          <input type="radio" name="size" id="s8" value="8">
+          <label for="s8">8</label>
+
+          <input type="radio" name="size" id="s9" value="9" checked>
+          <label for="s9">9</label>
+
+          <input type="radio" name="size" id="s10" value="10">
+          <label for="s10">10</label>
+
+          <input type="radio" name="size" id="s11" value="11">
+          <label for="s11">11</label>
+
+          <input type="radio" name="size" id="s12" value="12">
+          <label for="s12">12</label>
+        </div>
+      </fieldset>
+
+      <button class="buy-button" type="submit">Tambahkan ke Keranjang</button>
+    </form>
+  </article>
+
+</body>
+</html>
